@@ -1,3 +1,7 @@
+import { mount } from 'redom'
 import { MESSAGE } from './lib/message'
+import { Hello } from './components/hello'
 
-console.log(MESSAGE)
+const hello = new Hello()
+mount(document.querySelector('#app'), hello)
+hello.update(MESSAGE)
