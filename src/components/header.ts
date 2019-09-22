@@ -1,7 +1,9 @@
 import { RedomComponent, el, svg } from 'redom'
 
 /**
- * Start Hero Header Component
+ * Header Component
+ *
+ * Based on Startup Hero Header Component
  *
  * @link https://tachyons.io/components/headers/startup-hero/index.html
  */
