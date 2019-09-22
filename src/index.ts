@@ -1,6 +1,6 @@
 import 'tachyons'
-import { mount } from 'redom'
+import { el, mount } from 'redom'
 import { Header } from './components/header'
+import { Article } from './components/article'
 
-const header = new Header()
-mount(document.querySelector('#app'), header)
+mount(document.querySelector('#app'), el('div', new Header(), new Article()))
