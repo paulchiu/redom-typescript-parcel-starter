@@ -1,3 +1,4 @@
+import 'tachyons'
 import { mount } from 'redom'
 import { MESSAGE } from './lib/message'
 import { Hello } from './components/hello'
