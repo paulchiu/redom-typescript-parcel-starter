@@ -2,6 +2,7 @@
   "name": "redom-typescript-parcel-starter",
   "version": "0.1.0",
   "description": "Redom Typescript Parcel Starter Project",
+  "repository": "github:paulchiu/redom-typescript-parcel-starter",
   "main": "src/index.ts",
   "scripts": {
     "start": "parcel src/index.html",
@@ -15,7 +16,10 @@
   "author": "Paul Chiu",
   "license": "MIT",
   "devDependencies": {
+    "@types/redom": "^3.12.1",
     "parcel-bundler": "^1.12.3",
+    "redom": "^3.24.1",
+    "tachyons": "^4.10.0",
     "typescript": "^3.6.3"
   }
 }
