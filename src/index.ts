@@ -1,8 +1,6 @@
 import 'tachyons'
 import { mount } from 'redom'
-import { MESSAGE } from './lib/message'
-import { Hello } from './components/hello'
+import { Header } from './components/header'
 
-const hello = new Hello()
-mount(document.querySelector('#app'), hello)
-hello.update(MESSAGE)
+const header = new Header()
+mount(document.querySelector('#app'), header)
