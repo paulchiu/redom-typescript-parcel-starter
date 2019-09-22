@@ -1,11 +1,11 @@
-import { RedomComponent, el } from 'redom'
+import { RedomComponent, RedomElement, el, setChildren } from 'redom'
 import { Header } from './header'
 import { HeroHeader } from './hero-header'
 
 export class Layout implements RedomComponent {
   public el: HTMLElement
-  public header: Header | HeroHeader | HTMLElement
-  public body: HTMLElement
+  public header: Header | HeroHeader | RedomElement
+  public body: RedomElement
 
   constructor() {
     this.el = el('div',
@@ -15,10 +15,10 @@ export class Layout implements RedomComponent {
   }
 
   public useHeroHeader() {
-    this.header = new HeroHeader()
+    setChildren(this.header, [new HeroHeader()])
   }
 
   public useNormalHeader() {
-    this.header = new Header()
+    setChildren(this.header, [new Header()])
   }
 }
