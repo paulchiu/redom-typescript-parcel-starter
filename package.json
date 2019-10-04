@@ -7,7 +7,7 @@
   "scripts": {
     "start": "parcel src/index.html",
     "build": "parcel build src/index.html",
-    "deploy": "now --name redom-typescript-parcel-starter dist/",
+    "deploy": "now --target production --name redom-typescript-parcel-starter dist/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
