@@ -16,7 +16,9 @@
   "author": "Paul Chiu",
   "license": "MIT",
   "devDependencies": {
+    "@types/page": "^1.8.0",
     "@types/redom": "^3.12.1",
+    "page": "^1.11.5",
     "parcel-bundler": "^1.12.3",
     "redom": "^3.24.1",
     "tachyons": "^4.10.0",
