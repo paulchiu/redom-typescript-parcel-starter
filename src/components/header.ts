@@ -1,5 +1,14 @@
 import { RedomComponent, el, svg } from 'redom'
 
+export interface MenuItem {
+  title: string
+  url: string
+}
+
+export interface HeaderProps {
+  menuItems: MenuItem[]
+}
+
 /**
  * Header Component
  *
@@ -9,8 +18,9 @@ import { RedomComponent, el, svg } from 'redom'
  */
 export class Header implements RedomComponent {
   public el: HTMLElement
+  public menu: HTMLElement[]
 
-  constructor() {
+  constructor(props: HeaderProps) {
     this.el = el('header.sans-serif',
       el('div', { class: 'cover bg-left bg-center-l' },
         el('div', { class: 'bg-black-80 h3' },
@@ -24,11 +34,9 @@ export class Header implements RedomComponent {
               )
             ),
             el('div', { class: 'dtc v-mid tr pa3' },
-              el('a', { href: '/', class: 'f6 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3' }, 'How it Works'),
-              el('a', { href: '/', class: 'f6 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3' }, 'Pricing'),
-              el('a', { href: '/', class: 'f6 fw4 hover-white no-underline white-70 dn dib-l pv2 ph3' }, 'About'),
-              el('a', { href: '/', class: 'f6 fw4 hover-white no-underline white-70 dn dib-l pv2 ph3' }, 'Careers'),
-              el('a', { href: '/', class: 'f6 fw4 hover-white no-underline white-70 dib ml2 pv2 ph3 ba' }, 'Sign Up')
+              this.menu = props.menuItems.map(i => {
+                return el('a', { href: i.url, class: 'f6 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3' }, i.title);
+              }),
             )
           )
         )
