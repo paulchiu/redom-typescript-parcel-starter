@@ -19,7 +19,7 @@ mount(document.querySelector('#app'), layout)
 // Start router
 page('/', () => {
   setChildren(layout.header, [new HeroHeader({
-    heroImage: 'http://mrmrs.github.io/photos/u/011.jpg',
+    heroImage: '//mrmrs.github.io/photos/u/011.jpg',
     menuItems: menu
   })])
   setChildren(layout.body, [new Article(HomePageArticle)])

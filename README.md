@@ -17,7 +17,7 @@ Sample starter project that uses:
 
 ## Production Build
 
-(To do: Instructions)
+- Run `npm run build` to build for production
 
 ## Sources
 
