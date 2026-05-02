@@ -1,3 +1,6 @@
+> [!WARNING]
+> This project is abandoned and has been archived in 2026. It is no longer maintained.
+
 # RE:DOM Typescript Parcel Starter
 
 [Demo](https://redom-typescript-parcel-starter.paulchiu.now.sh)
